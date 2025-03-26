@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Simple Counter</h1>
+        <nav>
+            <select id="Modo">
+                <option value="SimpleCounter" selected disabled>Seleccione un modo</option>
+                <option value="SimpleCounter">Contador clicks</option>
+                <option value="Cronometro">Cronómetro</option>
+                <option value="Reloj">Reloj</option>
+            </select>
+        </nav>
+    </header>
+    <main>
+        <div id="SimpleCounter">
+            <h2>Counter</h2>
+            <div>
+                <div class="counter-value">
+                    <b  id="counter">0</b>
+                </div>
+                <div class="buttons">
+                    <button class="counter-button" id="Incrementar">Incrementar</button>
+                    <button class="counter-button" id="Decrementar">Decrementar</button>
+                    <button class="counter-button" id="Reset">Resetear</button>
+                </div>
+            </div>
+        </div>
+        <div id="Cronometro" style="display: none;">
+            <h2>Cronómetro</h2>
+            <div class="crono-value">
+                <p><b id="hours">00</b>:<b id="minutes">00</b>:<b id="seconds">00</b></p>
+            </div>
+            <button class="crono-button active" id="start">Iniciar</button>
+            <button class="crono-button" id="stop">Detener</button>
+            <button class="crono-button" id="reset">Reiniciar</button>
+        </div>
+        <div id="Reloj" style="display: none;">
+            <h2>Reloj</h2>
+            <div class="day">
+                <p><b id="day"></b></p>
+                <p><b id="date"></b></p>
+            </div>
+            <div>
+                <p><b id="hour">00</b>:<b id="minute">00</b>:<b id="second">00</b></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Gracias por visitar Simple Counter</p>
+    </footer>
+</body>
+</html>
