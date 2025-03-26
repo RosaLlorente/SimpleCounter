@@ -13,6 +13,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
 </div>
 
-![image](https://github.com/user-attachments/assets/6f36856c-85d9-4056-9d25-39778b9f4552)
+![image](https://github.com/user-attachments/assets/fe9d2688-43f9-4fbc-9f6e-d95be3d31ae9)
+
 
 ###
