@@ -87,18 +87,22 @@ function Cronometro() {
     var minutes = document.getElementById("minutes");
     var seconds = document.getElementById("seconds");
     var Reset = document.getElementById("reset");
+    var crono = document.getElementById("crono");
 
     var cronometro = null;
     var h = 0;
     var m = 0;
     var s = 0;
 
+    Detener.disabled = true;
     //Gestionar el inicio del cronometro
     Iniciar.addEventListener("click", function() {
         Iniciar.disabled = true;
+        Detener.disabled = false;
         h = 0;
         m = 0;
         s = 0;
+        crono.style.color = "var(--ContadorPositivo)";
         cronometro = setInterval(() => {
             s++;
             seconds.innerText = s;
@@ -119,12 +123,14 @@ function Cronometro() {
     Detener.addEventListener("click", function() {
         if(Detener.innerText === "Detener") 
         {
-        Iniciar.disabled = false;
-        clearInterval(cronometro);
-        Detener.innerText = "Reanudar";
+            crono.style.color = "var(--CronometroPausado)";
+            Iniciar.disabled = true;
+            clearInterval(cronometro);
+            Detener.innerText = "Reanudar";
         }
         else 
         {
+            crono.style.color = "var(--ContadorPositivo)";
             Iniciar.disabled = true;
             cronometro = setInterval(() => {
                 s++;
@@ -150,12 +156,13 @@ function Cronometro() {
         h = 0;
         m = 0;
         s = 0;
-        hours.innerText = h;
-        minutes.innerText = m;
-        seconds.innerText = s;
+        hours.innerText = "00";
+        minutes.innerText = "00";
+        seconds.innerText = "00";
         Detener.innerText = "Detener";
         clearInterval(cronometro);
         Iniciar.disabled = false;
+        crono.style.color = "var(--color-positivo)";
     });
 }
 

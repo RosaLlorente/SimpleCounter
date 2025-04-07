@@ -22,7 +22,7 @@
     --fondo-option: #d7d7e5;
     --fondo-main: #504FFF;
     --fondo-footer: #000060;
-    --fondo-traslucido1: #9292e458;
+    --fondo-traslucido1: #ffffffba;
 
     --texto-titulos: #9A99FF;
     --texto-texto: #FFFFFF;
@@ -30,12 +30,13 @@
 
     --borde1: #01012c;
 
-    --boton-incrementar: #07dc87;
-    --boton-decrementar: #f009c2;
+    --boton-incrementar: #6cdcaf;
+    --boton-decrementar: #e170cb;
     --boton-resetear: #d7d5ed;
 
     --ContadorPositivo: #14d321;
     --ContadorNegativo: #c90000;
+    --CronometroPausado: #f38200;
 
 }
 
@@ -137,10 +138,12 @@ h2 {
     width: 50em;
 }
 
-#SimpleCounter .buttons button{
+.buttons button{
     font-size: 1.5em;
     padding: 0.5em;
-    width: 7em;
+    width: 10em;
+    font-family: var(--texto-resaltado);
+    font-weight: 900;
 }
 
 #Incrementar{
@@ -162,6 +165,60 @@ h2 {
     border: 2px inset var(--color-positivo);
 }
 
+/* Cronometro */
+.crono-value
+{
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: var(--fondo-traslucido1);
+    clip-path: rectangle();
+}
+.crono-value > p{
+    font-size: 7em;
+    padding: 1rem;
+    text-align: center;
+    font-family: var(--texto-texto);
+    color: var(--color-positivo);
+    text-shadow: 3px 3px 7px var(--color-negativo);
+}
+#crono
+{
+    color: var(--color-positivo);
+}
+
+/* Reloj */
+.datatime
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.day{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    font-size: 2em;
+    padding: 1em;
+    background-color: var(--fondo-traslucido1);
+    color: var(--color-positivo);
+    text-shadow: 3px 3px 7px var(--color-negativo);
+    box-shadow: 10px 10px 10px var(--color-negativo);
+    border: 0.1em inset var(--color-negativo);
+}
+.time
+{
+    font-size: 2em;
+    padding: 1em;
+    background-color: var(--fondo-traslucido1);
+    color: var(--color-positivo);
+    text-shadow: 3px 3px 7px var(--color-negativo);
+    box-shadow: 10px 10px 10px var(--color-negativo);
+    border: 0.1em inset var(--color-negativo);
+}
 
 
 /*Footer */

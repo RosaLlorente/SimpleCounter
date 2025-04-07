@@ -33,23 +33,27 @@
                 </div>
             </div>
         </div>
-        <div id="Cronometro" style="display: none;">
+        <div id="Cronometro">
             <h2>Cronómetro</h2>
             <div class="crono-value">
-                <p><b id="hours">00</b>:<b id="minutes">00</b>:<b id="seconds">00</b></p>
+                <p id="crono"><b id="hours">00</b>:<b id="minutes">00</b>:<b id="seconds">00</b></p>
             </div>
-            <button class="crono-button active" id="start">Iniciar</button>
-            <button class="crono-button" id="stop">Detener</button>
-            <button class="crono-button" id="reset">Reiniciar</button>
+            <div class="buttons">
+                <button class="crono-button active" id="start">Iniciar</button>
+                <button class="crono-button" id="stop">Detener</button>
+                <button class="crono-button" id="reset">Reiniciar</button>
+            </div>
         </div>
-        <div id="Reloj" style="display: none;">
+        <div id="Reloj">
             <h2>Reloj</h2>
-            <div class="day">
-                <p><b id="day"></b></p>
-                <p><b id="date"></b></p>
-            </div>
-            <div>
-                <p><b id="hour">00</b>:<b id="minute">00</b>:<b id="second">00</b></p>
+            <div class="datatime">
+                <div class="day">
+                    <p><b id="day"></b></p>
+                    <p><b id="date"></b></p>
+                </div>
+                <div class="time">
+                    <p><b id="hour">00</b>:<b id="minute">00</b>:<b id="second">00</b></p>
+                </div>
             </div>
         </div>
     </main>
